@@ -115,7 +115,7 @@ export default class Style {
         }
 
         selector = selector.trim();
-        if (!selector) return;
+        if (!selector || !this.stylesheet.cssRules) return;
 
         // find and remove
         const prefixedSelector = this._getPrefixedSelector(selector);
